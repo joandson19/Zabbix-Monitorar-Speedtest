@@ -12,8 +12,6 @@
 ```
 # speedtest-cli
 ```
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/0a99bcd5-381b-4862-a10b-07f20bf5e188)
-
 ### Após vamos criar uma nova pasta em /etc/zabbix e baixar os arquivos
 ```
 # cd /etc/zabbix/zabbix_agentd.d/
@@ -32,7 +30,7 @@ Timeout=30
 ```
 speedtest-cli --list
 ```
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/3ec3c3c3-abf1-4e56-b310-9380e4d34b31)
+![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/b8f5a3ab-f641-412d-a4b3-2a400215a3fc)
 
 * Anote a id do server que você escolheu
 
@@ -42,17 +40,7 @@ speedtest-cli --list
 
 * Crie o host e atribua o template que você importou 
 * Em interface agente use o ip 127.0.0.1
-
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/44d20f22-86e7-415f-9fbf-d72439226869)
-
 * Em Macros herdadas e do host atribua a macro {$SERVER_ID} o valor de id do server! 
-
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/55491399-ebd2-49df-9662-3182dd82b7d9)
 
 ### Se você seguiu todos os passou corretamente, após salvar é só executar os itens "Speed-Teste Download" e "Speed-Teste Upload" manualmente para testar e verificar os resultados em Dados Recentes.
 ### Execute um item e após 1 minutos execute o outro para evitar resultado falso devido a possível estouro de banda da porta.
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/49361849-966e-4093-a3cd-655af64c6efa)
-``
-Exemplo de retorno em Dados Recentes.
-``
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/4eb23cea-b592-460b-b01b-271a5c41d41d)
