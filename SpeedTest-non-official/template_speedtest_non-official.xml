@@ -53,7 +53,7 @@
                     <uuid>35bd78b6238b4692a5afa55c71033481</uuid>
                     <name>SpeedTest-Upload</name>
                     <key>speedtest_upload[{$SERVER_ID}]</key>
-                    <delay>1d;1d/1-7,03:00-03:30</delay>
+                    <delay>1d;1d/1-7,03:00-03:35</delay>
                     <trends>0</trends>
                     <preprocessing>
                         <step>
