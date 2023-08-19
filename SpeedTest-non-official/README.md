@@ -16,19 +16,8 @@
 
 ### Após vamos criar uma nova pasta em /etc/zabbix e baixar os arquivos
 ```
-# mkdir /etc/zabbix/scripts
-# cd /tmp
-# git clone https://github.com/joandson19/Zabbix-Monitorar-Speedtest.git
-# cd Zabbix-Monitorar-Speedtest/
-# mv speedtest_* /etc/zabbix/scripts/
-# mv userparameter_speedtest.conf /etc/zabbix/zabbix_agentd.d/
-# cd ..
-# rm -rf Zabbix-Monitorar-Speedtest/
-```
-### Permissões
-```
-# chown zabbix. -R /etc/zabbix/scripts
-# chmod +x /etc/zabbix/scripts
+# cd /etc/zabbix/zabbix_agentd.d/
+# wget https://raw.githubusercontent.com/joandson19/Zabbix-Monitorar-Speedtest/main/SpeedTest-non-official/userparameter_speedtest.conf -O userparameter_speedtest.conf
 ```
 ### Altere o Timeout do zabbix-agent
 ```
@@ -41,14 +30,14 @@ Timeout=30
 ```
 ### Agora vamos coletar i id do server que usaremos para efetuar os testes! Lembre de escolher um server confiável. 
 ```
-speedtest --list
+speedtest-cli --list
 ```
 ![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/3ec3c3c3-abf1-4e56-b310-9380e4d34b31)
 
 * Anote a id do server que você escolheu
 
 ### Vá até o seu zabbix e importe o template 
-[https://github.com/joandson19/Templates-Zabbix/blob/main/speedtest/template_speedtest.xml](https://github.com/joandson19/Templates-Zabbix/blob/main/speedtest/template_speedtest.xml)
+[https://github.com/joandson19/Zabbix-Monitorar-Speedtest/blob/main/SpeedTest-non-official/template_speedtest_non-official.xml](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/blob/main/SpeedTest-non-official/template_speedtest_non-official.xml)
 ### Crie o novo host da forma que achar melhor.
 
 * Crie o host e atribua o template que você importou 
