@@ -36,8 +36,10 @@ speedtest-cli --list
 
 ### Vá até o seu zabbix e importe o template 
 [https://github.com/joandson19/Zabbix-Monitorar-Speedtest/blob/main/SpeedTest-non-official/template_speedtest_non-official.xml](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/blob/main/SpeedTest-non-official/template_speedtest_non-official.xml)
-### Crie o novo host da forma que achar melhor.
 
+### Crie o novo host da forma que achar melhor.
+![261647055-44d20f22-86e7-415f-9fbf-d72439226869](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/cc187200-8730-403e-8b99-a3e651f942f9)
+![261647865-55491399-ebd2-49df-9662-3182dd82b7d9](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/6bb0438c-b588-456e-9e9a-7e206c7dfb7c)
 * Crie o host e atribua o template que você importou 
 * Em interface agente use o ip 127.0.0.1
 * Em Macros herdadas e do host atribua a macro {$SERVER_ID} o valor de id do server! 
