@@ -32,3 +32,7 @@ EOF
 # service zabbix-agent restart
 ```
 
+## Após vá até o servidor zabbix!
+* Importe o template_speedtest_official.xml
+* Crie um novo host e set o ip agent = 127.0.0.1 ou use o host zabbix !
+* Adicione o template e execute o item manualmente para verificar. 
