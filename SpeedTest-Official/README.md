@@ -1,9 +1,11 @@
 # Com SpeedTest Offícial 
 
+```
 # sudo apt-get remove speedtest-cli
 # sudo apt-get install curl
 # curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 # sudo apt-get install speedtest
+```
 
 ## Execute o comando speedtest com o usuario do zabbix e aceite os termos antes de iniciarmos os testes no zabbix!
 ```
