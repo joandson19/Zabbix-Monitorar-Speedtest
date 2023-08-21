@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>6.0</version>
-    <date>2023-08-19T14:45:09Z</date>
+    <date>2023-08-21T00:05:13Z</date>
     <groups>
         <group>
             <uuid>bc27c924633c4a0fa726fedc3e95fee5</uuid>
@@ -21,8 +21,8 @@
             <items>
                 <item>
                     <uuid>c3ac6ab7794a433581642d11976be279</uuid>
-                    <name>Download-{$HOST.NAME}</name>
-                    <key>speedtest[{$SERVIDOR_ID}]</key>
+                    <name>Download</name>
+                    <key>speedtest[{$SERVER_ID}]</key>
                     <delay>1d;1d/1-7,03:00-03:30</delay>
                     <trends>0</trends>
                     <units>Mbps</units>
@@ -49,7 +49,7 @@
                     <triggers>
                         <trigger>
                             <uuid>81a26fdfa1d24a41b29c5d8578843faa</uuid>
-                            <expression>last(/speedtest/speedtest[{$SERVIDOR_ID}]) &lt;= avg(&quot;/speedtest/speedtest[{$SERVIDOR_ID}]&quot;,&quot;7d&quot;) * 0.9</expression>
+                            <expression>last(/speedtest/speedtest[{$SERVER_ID}]) &lt;= avg(&quot;/speedtest/speedtest[{$SERVIDOR_ID}]&quot;,&quot;7d&quot;) * 0.9</expression>
                             <name>SpeedTest</name>
                             <priority>HIGH</priority>
                             <manual_close>YES</manual_close>
@@ -57,6 +57,11 @@
                     </triggers>
                 </item>
             </items>
+            <macros>
+                <macro>
+                    <macro>{$SERVER_ID}</macro>
+                </macro>
+            </macros>
             <dashboards>
                 <dashboard>
                     <uuid>8d4153d4a17c420d98abe321ebc40e08</uuid>
@@ -97,7 +102,7 @@
                     <calc_fnc>ALL</calc_fnc>
                     <item>
                         <host>speedtest</host>
-                        <key>speedtest[{$SERVIDOR_ID}]</key>
+                        <key>speedtest[{$SERVER_ID}]</key>
                     </item>
                 </graph_item>
             </graph_items>
