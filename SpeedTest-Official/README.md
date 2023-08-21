@@ -11,7 +11,7 @@
 ```
 # sudo -u zabbix speedtest
 ```
-* Ele irá pedir para aceitar os termos "YES "YES"
+* Ele irá pedir para aceitar os termos "YES" "YES"
 
 ## Após isso vamos executar com o usuario zabbix
 ```
