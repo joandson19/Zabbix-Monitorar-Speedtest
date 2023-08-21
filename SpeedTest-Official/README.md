@@ -23,7 +23,8 @@
 ```
 # cd /etc/zabbix/zabbix_agentd.d
 # cat <<EOF > speedtest.conf
-UserParameter=speedtest[*],speedtest --format=json -A -s $1
+UserParameter=speedtest_download[*],speedtest --format=json -A -s $1
+UserParameter=speedtest_upload[*],speedtest --format=json -A -s $1
 EOF
 ```
 
