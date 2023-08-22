@@ -24,7 +24,7 @@
 # sudo -u zabbix speedtest -s 12561 --format=json -A
 ```
 * Se seguiu todos os passos corretamente ao executar o ultimo comando acima você receberá um retorno parecido com o da imagem abaixo.
-![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/df229a8d-2ca9-42e3-9c8c-1018c109fc5a)
+![image](https://github.com/joandson19/Zabbix-Monitorar-Speedtest/assets/36518985/ab1e3e6d-f4bc-4935-8b59-5713611cf118)
 * O numero 12561 é o ID do servidor que eu escolhi da lista e --format define que queremos o retorno em json
 
 ## Agora crie o arquivo speedtest.conf com o conteúdo de agente de monitoramento
